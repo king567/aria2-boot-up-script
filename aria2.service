@@ -1,0 +1,9 @@
+[Unit]
+Description=Aria2 Service
+[Service]
+User=root
+Type=forking
+ExecStart=/usr/bin/sh /root/.aria2/start.sh
+ExecStop=/usr/bin/killall aria2c
+[Install]
+WantedBy=multi-user.target
